@@ -79,6 +79,8 @@ local function resolve_link(link)
 	elseif link:sub(1, 8) == [[https://]] or link:sub(1, 7) == [[http://]] then
 		link_type = "web"
 		return link, link_type
+	elseif link:sub(1, 7) == [[file://]] then
+		return resolve_link(string.sub(link,8))
 	else
 		link_type = "local"
 		return fn.expand("%:p:h") .. [[/]] .. link, link_type
