@@ -1,3 +1,7 @@
+> forked from jghauser/follow-md-links.nvim
+
+add "file://" format support. e.g. `[my file](file://./folder/file.txt)`
+
 # follow-md-links.nvim
 
 This neovim plugin allows you to follow markdown links by pressing enter when the cursor is positioned on a link. It supports:
